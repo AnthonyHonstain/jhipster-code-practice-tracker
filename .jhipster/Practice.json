@@ -1,0 +1,47 @@
+{
+  "applications": "*",
+  "changelogDate": "20220904184807",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "practice",
+  "fields": [
+    {
+      "fieldName": "problemName",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "problemLink",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "start",
+      "fieldType": "ZonedDateTime"
+    },
+    {
+      "fieldName": "end",
+      "fieldType": "ZonedDateTime"
+    },
+    {
+      "fieldName": "result",
+      "fieldType": "PracticeResult",
+      "fieldValues": "PASS,FAIL"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Practice",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "practiceSession",
+      "otherEntityRelationshipName": "practice",
+      "relationshipName": "practiceSession",
+      "relationshipType": "many-to-one",
+      "relationshipValidateRules": "required"
+    }
+  ],
+  "service": "no"
+}

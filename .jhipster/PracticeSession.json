@@ -1,0 +1,31 @@
+{
+  "applications": "*",
+  "changelogDate": "20220904184806",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "practice_session",
+  "fields": [
+    {
+      "fieldName": "start",
+      "fieldType": "ZonedDateTime"
+    },
+    {
+      "fieldName": "end",
+      "fieldType": "ZonedDateTime"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "PracticeSession",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "practice",
+      "otherEntityRelationshipName": "practiceSession",
+      "relationshipName": "practice",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "service": "no"
+}

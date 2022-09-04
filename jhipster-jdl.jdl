@@ -1,0 +1,22 @@
+
+entity PracticeSession {
+    start ZonedDateTime,
+    end ZonedDateTime,
+}
+
+enum PracticeResult {
+    	PASS,
+        FAIL
+}
+
+entity Practice {
+	problemName String required,
+    problemLink String required,
+    start ZonedDateTime,
+    end ZonedDateTime,
+    result PracticeResult
+}
+
+relationship OneToMany {
+  PracticeSession to Practice{PracticeSession required}
+}
